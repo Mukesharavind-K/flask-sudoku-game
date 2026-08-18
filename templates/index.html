@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sudoku Game</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+  <!-- Dark / Light Mode Button -->
+  <button id="theme-toggle" class="theme-button" title="Toggle dark/light mode">
+    🌙
+  </button>
+
+  <!-- Title -->
+  <h1>Sudoku</h1>
+
+  <!-- Main Game Area -->
+  <div class="game-layout">
+
+    <!-- LEFT SIDE -->
+    <div class="left-panel">
+
+      <div class="difficulty-container">
+        <label for="difficulty-select">Difficulty:</label>
+
+        <select id="difficulty-select">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <button id="new-game" class="new-game-button">
+        New Game
+      </button>
+
+    </div>
+
+
+    <!-- CENTER -->
+    <div class="center-panel">
+
+      <div id="sudoku-board"></div>
+
+      <!-- Timer BELOW board -->
+      <div class="timer-container">
+        Time: <span id="timer">00:00</span>
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="right-panel">
+
+      <button id="check-solution" class="check-button">
+        Check
+      </button>
+
+      <button id="hint" class="hint-button">
+        Hint
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- Game information -->
+  <div class="game-info">
+
+    <span id="hints-counter">
+      Hints: 0
+    </span>
+
+    <span id="message"></span>
+
+  </div>
+
+
+  <!-- SCOREBOARD -->
+  <div id="scoreboard-container">
+
+    <h2>Top 10 Fastest Times</h2>
+
+    <table id="scoreboard">
+
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Time</th>
+          <th>Level</th>
+          <th>Hints</th>
+        </tr>
+      </thead>
+
+      <tbody id="scoreboard-body">
+      </tbody>
+
+    </table>
+
+  </div>
+
+
+  <script src="/static/main.js"></script>
+
+</body>
+</html>
